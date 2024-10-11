@@ -1,0 +1,5 @@
+- working is sharing directory between docker and real device.
+use this directory to mount source code to virtual device.
+- To enter docker environment use below commands :
+$make init
+$make shell
