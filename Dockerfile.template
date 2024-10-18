@@ -44,7 +44,15 @@ RUN apt-get autoremove -y automake
 RUN apt-get install -y automake
 RUN sudo ln -sf /usr/bin/python3.8 /usr/bin/python3
 
-RUN sudo ln -sf /usr/bin/gcc-8 /usr/bin/gcc && sudo ln -sf /usr/bin/gcc-ar-8 /usr/bin/gcc-ar && sudo ln -sf /usr/bin/gcc-nm-8 /usr/bin/gcc-nm && sudo ln -sf /usr/bin/gcc-ranlib-8 /usr/bin/gcc-ranlib
+RUN sudo ln -sf /usr/bin/gcc-8 /usr/bin/gcc
+RUN sudo ln -sf /usr/bin/gcc-ar-8 /usr/bin/gcc-ar
+RUN sudo ln -sf /usr/bin/gcc-nm-8 /usr/bin/gcc-nm
+RUN sudo ln -sf /usr/bin/gcc-ranlib-8 /usr/bin/gcc-ranlib
+RUN sudo ln -sf gcc-ranlib-8 x86_64-linux-gnu-gcc-ranlib
+RUN sudo ln -sf gcc-nm-8 x86_64-linux-gnu-gcc-nm
+RUN sudo ln -sf gcc-ar-8 x86_64-linux-gnu-gcc-ar
+RUN sudo ln -sf gcc-8 x86_64-linux-gnu-gcc
+
 RUN apt-get update && \
     apt-get install -y g++-8
 RUN sudo ln -sf /usr/bin/g++-8 /usr/bin/g++
