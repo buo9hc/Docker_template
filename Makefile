@@ -15,7 +15,7 @@ init: Dockerfile
 
 shell:
 	docker run --cap-add NET_ADMIN -it -e USER=$(user_name) -w /code/my-project/ -v $(source_dir)/my-project:/code/my-project \
-	$(user_name)_builder  bash
+	$(user_name)-builder  bash
 Dockerfile: Dockerfile.template
 	sed 's/<USER_NAME>/$(user_name)/g' Dockerfile.template | \
 	sed -e 's/<USER_ID>/$(user_id)/g' > Dockerfile
