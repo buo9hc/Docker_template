@@ -3,3 +3,17 @@ use this directory to mount source code to virtual device.
 - To enter docker environment use below commands :
 $make init
 $make shell
+
+Please structure Docker folder  template following below struct
+ 
+Folder structure:
+├── Docker_template
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   ├── Dockerfile.template
+│   ├── Makefile
+│   └── README
+└── my-project
+    ├── place_source_here
+    ├── ... 
+    └── ...
